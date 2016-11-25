@@ -1,10 +1,10 @@
-alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias nginx.start='sudo launchctl load /Library/LaunchDaemons//homebrew.mxcl.nginx.plist'
 alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
 alias nginx.restart='nginx.stop && nginx.start'
 
 alias apache.start='sudo launchctl load /usr/local/opt/httpd22/homebrew.mxcl.httpd22.plist'
 alias apache.stop='sudo launchctl unload /usr/local/opt/httpd22/homebrew.mxcl.httpd22.plist'
-alias apache.restart='apache.stop && nginx.start'
+alias apache.restart='apache.stop && apache.start'
 
 alias php-fpm.start="launchctl load -w /usr/local/Cellar/php70/7.0.12_5/homebrew.mxcl.php70.plist"
 alias php-fpm.stop="launchctl unload -w /usr/local/Cellar/php70/7.0.12_5/homebrew.mxcl.php70.plist"
