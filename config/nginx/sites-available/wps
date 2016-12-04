@@ -1,0 +1,28 @@
+# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+upstream php {
+  server 127.0.0.1:9000;
+}
+
+server {
+  listen               80 default_server;
+  listen [::]:80    default_server ipv6only=on;
+  server_name         localhost;
+
+  root /Users/amit/Projects/wps;
+  index     index index.php index.html;
+
+  access_log  /Users/amit/Projects/config/nginx/logs/nginx.access.log  main;
+  error_log  /Users/amit/Projects/config/nginx/logs/nginx.error.log  debug;
+
+  location / {
+    try_files $uri $uri/ /index.php?$args;
+  }
+
+  location /NEWSITE{
+    try_files $uri $uri/ /NEWSITE/index.php?$args;
+  }
+
+
+  include /Users/amit/Projects/config/nginx/conf.d/php-fpm;
+
+}
