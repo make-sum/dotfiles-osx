@@ -18,8 +18,12 @@ server {
     try_files $uri $uri/ /index.php?$args;
   }
 
-  location /NEWSITE{
-    try_files $uri $uri/ /NEWSITE/index.php?$args;
+  location /argentoclub{
+    try_files $uri $uri/ /argentoclub/index.php?$args;
+  }
+
+  location /bina-2.0{
+    try_files $uri $uri/ /bina-2.0/web/index.php?$args;
   }
 
 

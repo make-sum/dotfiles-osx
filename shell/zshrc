@@ -154,4 +154,6 @@ source ~/.iterm2_shell_integration.`basename $SHELL`
   fpath=(/usr/local/share/zsh-completions $fpath)
 
 #brew
-  export HOMEBREW_GITHUB_API_TOKEN="fc8d3f78ef81dac13dd95afb5be502a1e23021d7"
+  export HOMEBREW_GITHUB_API_TOKEN="81e96387d9a1c7751da8b69b7be9e98f5673d979"
+  export SSL_CERT_FILE="/etc/ssl/certs/cacert.pem"
+
